@@ -110,12 +110,6 @@ def file_trav(inputDir):
 
 				fname_MBID = fname[0:36] #first 36 characters of fname, without duplicate number
 				fname_List.append(fname_MBID)
-				last_Dash_Index = fname.rfind('-', 0, 10) #Find the index of last dash
-				last_Dot_Index = fname.rfind('.', 0, 10) #Find the index of last dot
-				root_Name = fname[37:(len(fname)-last_Dot_Index)]
-				root_Name = root_Name[:-5]
-				#print(root_Name) + " ---> Root Name" #The root part of the file name without duplicate number and .json part.
-
 
 				#--------- Detection of Duplicates From Same Song Only ----------# 
 
