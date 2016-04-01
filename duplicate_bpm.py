@@ -8,7 +8,7 @@ fileCount = 0
 fname_MBID = ""
 fname_List = [] # List of file names
 path_Array = [] # List of full paths of the duplicates of a given song
-ultimate_Bpm = [[0],[0],[0],[0],[0],[0]] # MBID, #1 Most Used Key, Rate of 1st, #2 Most Used Key, Rate of 2nd,Total # Duplicates
+ultimate_Bpm = [[0],[0],[0],[0],[0],[0]] # MBID, #1 Most Used Bpm, Percentage of 1st, #2 Most Used Bpm, Percentage of 2nd,Total # Duplicates
 
 
 
@@ -58,7 +58,7 @@ def json_Read(path_Array):
 
 
 	try:
-		most_Bpm_Index = bpm_Array[1].index(max(bpm_Array[1])) # Index of Second Most Used Key
+		most_Bpm_Index = bpm_Array[1].index(max(bpm_Array[1])) # Index of Second Most Used Bpm
 		rate = float(bpm_Array[1][most_Bpm_Index])/total_Songs*100 # Rate of the Second 
 
 		ultimate_Bpm[3].append(bpm_Array[0][most_Bpm_Index]) # Add second most used bpm to the fourth column
